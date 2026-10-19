@@ -37,8 +37,8 @@ app.get('/usuarios', async (req, res) => {
 });
 
 app.get('/productos', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM productos ORDER BY id');
+ try {
+    const result = await pool.query('SELECT * FROM aproductos ORDER BY id');
     res.json(result.rows);
   } catch (error) {
     console.error(error.message);
