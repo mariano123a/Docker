@@ -7,7 +7,7 @@ app.get('/health', (req, res) => {
 });
 app.get('/productos', async (req, res) => {
  try {
-  const result = await pool.query('SELECT * FROM producto_inexistente');
+  const result = await pool.query('SELECT * FROM productos ORDER BY id');
   res.json(result.rows);
  } catch (error) {
   console.error(error.message);
