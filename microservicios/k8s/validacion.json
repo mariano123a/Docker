@@ -1,0 +1,54 @@
+{
+  "usuarios": {
+    "health": {
+      "estado": "ok",
+      "servicio": "usuarios"
+    },
+    "initial_rows": 3
+  },
+  "productos": {
+    "health": {
+      "estado": "ok",
+      "servicio": "productos"
+    },
+    "initial_rows": 3
+  },
+  "pedidos": {
+    "health": {
+      "estado": "ok",
+      "servicio": "pedidos"
+    },
+    "initial_rows": 3
+  },
+  "load_test": {
+    "successful_gets": 600,
+    "duration_seconds": 2.58
+  },
+  "reference_checks": {
+    "valid_post": 201,
+    "invalid_user": 400,
+    "invalid_product": 400,
+    "test_record_deleted": true
+  },
+  "pod_recovery": {
+    "deleted": "pedidos-54568d465f-97svg",
+    "ready_replicas": 2,
+    "current_pods": [
+      "pedidos-54568d465f-bt5lx",
+      "pedidos-54568d465f-n7j9w"
+    ],
+    "automatic_port_reconnection": true
+  },
+  "tested_on": "2026-10-26",
+  "startup_script_stop_start": "passed",
+  "replicas_per_api": 2,
+  "persistent_volumes_bound": 3,
+  "monitoring": {
+    "release": "monitoring",
+    "chart": "kube-prometheus-stack-92.14.0",
+    "namespace": "monitoring",
+    "grafana_dashboard": "Kubernetes / Compute Resources / Namespace (Pods)",
+    "selected_namespace": "microservicios",
+    "cpu_and_memory_metrics_verified": true
+  }
+}
